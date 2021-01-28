@@ -21,5 +21,3 @@ to leaked messages.
 If your development tool allows adding environment variables in config files it's a
 powerful convenience, but DO NOT check them in to the repository.
 Go ahead - ask me how I know.
-
-Checking verification
