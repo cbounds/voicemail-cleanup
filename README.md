@@ -1,6 +1,6 @@
 # voicemail-cleanup
-This task should be run periodically to clean up the voicemails retained by
-Twilio.
+This task will clean up voicemails retained by Twilio.
+It should be run periodically.
 
 It will list all recordings, including SID and timestamp.
 By subtracting from current time it will determine the age of the recording.
@@ -14,10 +14,3 @@ For our usage, 30 days should keep us well below the threshold.
 
 The second reason is that in the event of a hack, this will lower our exposure
 to leaked messages.
-
-# Development Notes
-
-- Security: The Twilio SID and AUTH TOKEN are fed in by environment variables.
-If your development tool allows adding environment variables in config files it's a
-powerful convenience, but DO NOT check them in to the repository.
-Go ahead - ask me how I know.
