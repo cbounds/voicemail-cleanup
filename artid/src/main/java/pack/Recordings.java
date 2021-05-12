@@ -1,4 +1,4 @@
-// Install the Java helper library from twilio.com/docs/libraries/java
+// Use maven to install Twilio API
 package pack;
 
 import java.io.FileOutputStream;
