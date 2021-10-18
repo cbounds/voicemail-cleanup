@@ -53,6 +53,14 @@ public class Recordings {
 
             while (recordings.iterator().hasNext()) {
                 recording = recordings.iterator().next();
+
+                /* The timestamp in a recording record, in theory, is UTC.  However the TZ code used is Z, not UTC or GMT.
+                   Z means ZULU and is yet another valid designation for UTC, however it isn't handled correctly and the
+                   'DateTimeDifference' function doesn't work correctly.  Converting to local time fixes this.  I honestly don't
+                   know how this works at all but not converting to local time gave me fairly random differences.  I believe that
+                   this difference is still wrong, but only by a day, and rocket science is not required.
+                */
+
                 LocalDateTime recordtime = recording.getDateCreated().toLocalDateTime();
                 long days = localDateTimeDifference(recordtime, now, ChronoUnit.DAYS);
                 logger(recording.getSid() + "  " + recordtime + "  " + days);
