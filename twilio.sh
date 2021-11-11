@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Sample Windows bat file to run the cleanup.
+# Sample Linux bash shell script file to run the cleanup.
 # May be scheduled through cron or anacron.
 
 export TWILIO_ACCOUNT_SID=<SID from console>
