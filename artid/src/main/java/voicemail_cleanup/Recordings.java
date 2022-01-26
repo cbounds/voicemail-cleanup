@@ -42,14 +42,15 @@ public class Recordings {
                 fileWriter = new FileWriter(LOG_FILE, true); //Set true for append mode
                 logfile = new PrintWriter(fileWriter);
             }
+            LocalDateTime now = LocalDateTime.now();
+            logger("Run Time: " + now + "\n");
+            System.err.print("Run Time: " + now + "\n");
             
             Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
             ResourceSet<Recording> recordings = Recording.reader().read();
 
             Recording recording;
-            LocalDateTime now = LocalDateTime.now();
-            logger("Run Time: " + now + "\n");
 
             while (recordings.iterator().hasNext()) {
                 recording = recordings.iterator().next();
