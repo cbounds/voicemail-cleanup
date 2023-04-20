@@ -11,4 +11,4 @@ export TWILIO_ERR=/var/log/twilioerr.txt
 java -jar voicemail-cleanup.jar
 
 # Comment out/remove for fully non-interactive execution
-read x
+read x <&1
