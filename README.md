@@ -4,7 +4,7 @@ It should be run periodically.
 
 It will list all recordings, including SID and timestamp.
 By subtracting from current time it will determine the age of the recording.
-Recordings older than 30 days will be deleted.
+Recordings older than 45 days will be deleted.
 
 This is done for two reasons.
 One is that Twilio charges for message storage.
