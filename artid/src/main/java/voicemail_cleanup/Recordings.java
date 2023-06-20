@@ -65,7 +65,7 @@ public class Recordings {
                 LocalDateTime recordtime = recording.getDateCreated().toLocalDateTime();
                 long days = localDateTimeDifference(recordtime, now, ChronoUnit.DAYS);
                 logger(recording.getSid() + "  " + recordtime + "  " + days);
-                if (days > 30) {
+                if (days > 45) {
                     Recording.deleter(recording.getSid()).delete();
                     logger(" Deleting\n");
                 }
