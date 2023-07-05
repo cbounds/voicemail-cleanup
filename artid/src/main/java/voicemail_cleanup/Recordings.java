@@ -44,6 +44,7 @@ public class Recordings {
             }
             LocalDateTime now = LocalDateTime.now();
             logger("Run Time: " + now + "\n");
+            logger("Twilio Version " + Twilio.VERSION + "\n");
             System.err.print("Run Time: " + now + "\n");
             
             Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
