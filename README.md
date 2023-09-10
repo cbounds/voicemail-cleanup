@@ -15,3 +15,5 @@ For our usage, 45 days should keep us well below the threshold.
 The second reason is that in the event of a hack at Twilio,
 this will lower our exposure
 to leaked messages.
+
+Detailed doc in the Wiki.
