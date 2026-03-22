@@ -51,10 +51,11 @@ public class Recordings {
 
             ResourceSet<Recording> recordings = Recording.reader().read();
 
-            Recording recording;
+            /* Change of technique.  This used to be recordings.iterator.next.  With Twilio 11, this keeps returning the first entry
+               of the iterator (I suspect an option changed). A little research turned up this technique which works.
+            */
 
-            while (recordings.iterator().hasNext()) {
-                recording = recordings.iterator().next();
+            for (Recording recording: recordings) {
 
                 /* The timestamp in a recording record, in theory, is UTC.  However the TZ code used is Z, not UTC or GMT.
                    Z means ZULU and is yet another valid designation for UTC, however it isn't handled correctly and the
