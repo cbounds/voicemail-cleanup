@@ -52,7 +52,7 @@ public class Recordings {
             ResourceSet<Recording> recordings = Recording.reader().read();
 
             /* Change of technique.  This used to be recordings.iterator.next.  With Twilio 11, this keeps returning the first entry
-               of the iterator (I suspect an option changed). A little research turned up this technique which works.
+               of the iterator (I suspect an option changed within the iterator creation). A little research turned up this technique which works.
             */
 
             for (Recording recording: recordings) {
